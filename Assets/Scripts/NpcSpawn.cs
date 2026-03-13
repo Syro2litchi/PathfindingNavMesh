@@ -19,12 +19,11 @@ public class NpcSpawn : MonoBehaviour
     private void Awake()
     {
         npcAgent = npc.GetComponent<NavMeshAgent>();
-        randomTime = Random.Range(10f, 20f);
+        randomTime = Random.Range(0f, 50f);
     }
 
     private void Start()
     {
-        SpawnNpcs();
     }
 
     // Update is called once per frame
@@ -35,7 +34,7 @@ public class NpcSpawn : MonoBehaviour
         {
             SpawnNpcs();
             timer = 0f;
-            randomTime = Random.Range(10f, 20f);
+            randomTime = Random.Range(10f, 50f);
             _selectedDestination = Random.Range(0, targets.Count);
         }
     }

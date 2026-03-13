@@ -26,8 +26,6 @@ public class NavMeshPathfinding : MonoBehaviour
     void Update()
     {
         _animator.SetFloat("ZVelocity", _agent.velocity.normalized.magnitude);
-
-        _agent.Raycast(_agent.destination, out NavMeshHit hit);
         
     }
 }

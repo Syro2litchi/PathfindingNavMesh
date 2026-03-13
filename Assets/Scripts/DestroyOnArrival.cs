@@ -17,7 +17,6 @@ public class DestroyOnArrival : MonoBehaviour
     {
         if (_destination == new Vector2(gameObject.transform.position.x, gameObject.transform.position.z))
         {
-            Debug.Log("Npc arrivé à destination");
             Destroy(gameObject, 0.8f);
         }
     }
