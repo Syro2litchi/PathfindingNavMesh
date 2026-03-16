@@ -13,21 +13,14 @@ public class PlayerInputs : MonoBehaviour
         _playerInputs = _player.GetComponent<PlayerInput>();
         _playerController = _player.GetComponent<PlayerController>();
     }
-    
-    void OnEnable()
+
+    private void OnMove(InputValue valeur)
     {
-        _playerInputs.actions["Move"].performed += OnMove;
-        _playerInputs.actions["Move"].canceled += OnMove;
+        _playerController.move = valeur.Get<Vector2>();
     }
 
-    void OnDisable()
+    private void OnLook(InputValue valeur)
     {
-        _playerInputs.actions["Move"].performed -= OnMove;
-        _playerInputs.actions["Move"].canceled -= OnMove;
-    }
-
-    private void OnMove(InputAction.CallbackContext context)
-    {
-        _playerController.move = context.ReadValue<Vector2>();
+        _playerController.look = valeur.Get<Vector2>();
     }
 }
