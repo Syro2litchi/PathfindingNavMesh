@@ -39,22 +39,10 @@ public class PlayerController : MonoBehaviour
             Quaternion targetRotation = Quaternion.LookRotation(stickToLook);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * _rotationSpeed);
         }
-
-        if (move == Vector2.zero)
-        {
-            _rb.linearVelocity = Vector3.zero;
-        }
         
         Vector3 animatorTransform = transform.TransformDirection(moveVector);
-        // float animatorTransform = _rb.linearVelocity.magnitude;
-        if (stickToLook == lookVector)
-        {
-            _animator.SetFloat("Z", animatorTransform.magnitude - lookVector.magnitude);
-        }
-        else
-        {
-            _animator.SetFloat("Z", stickToLook.magnitude);
-        }
         
+        _animator.SetFloat("Z", animatorTransform.z);
+        _animator.SetFloat("X", animatorTransform.x);
     }
 }
