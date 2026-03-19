@@ -26,7 +26,6 @@ namespace PlayerScripts
             if (Physics.Raycast(transform.position, transform.forward, out hit, 20))
             {
                 Instantiate(muzzleFlash, gameObject.transform.position, Quaternion.identity);
-                Debug.Log("Player shot and hit " + hit.transform.name);
                 
                 if (hit.transform.gameObject.layer == LayerMask.NameToLayer("IA"))
                 {
@@ -40,5 +39,4 @@ namespace PlayerScripts
             }
         }
     }
-
 }
