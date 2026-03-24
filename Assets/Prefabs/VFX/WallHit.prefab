@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3353302751332458957}
   - component: {fileID: 8865908231843666676}
   - component: {fileID: 6247959784748427712}
+  - component: {fileID: 3808710162914360143}
   m_Layer: 0
   m_Name: WallHit
   m_TagString: Untagged
@@ -4891,3 +4892,15 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &3808710162914360143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9119245111206938331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5764aeaa7adcbc43be77b0a6cdea07b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
