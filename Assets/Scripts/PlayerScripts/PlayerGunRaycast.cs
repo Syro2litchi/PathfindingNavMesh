@@ -1,3 +1,4 @@
+using FMODUnity;
 using UnityEngine;
 
 namespace PlayerScripts
@@ -8,6 +9,8 @@ namespace PlayerScripts
         [SerializeField] private GameObject hitWall;
         [SerializeField] private GameObject hitBot;
 
+        [SerializeField] private EventReference gunShot;
+        
         public bool fire;
 
         // Update is called once per frame
@@ -21,6 +24,7 @@ namespace PlayerScripts
 
         private void Fire()
         {
+            FmodAudioManager.Instance.Play(gunShot, false, gameObject);
             fire = false;
             RaycastHit hit;
             if (Physics.Raycast(transform.position, transform.forward, out hit, 20))

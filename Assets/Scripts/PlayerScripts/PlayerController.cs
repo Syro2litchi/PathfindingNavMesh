@@ -1,3 +1,4 @@
+using FMODUnity;
 using UnityEngine;
 
 namespace PlayerScripts
@@ -8,6 +9,9 @@ namespace PlayerScripts
         [SerializeField] private float _speedMultiplier;
         [SerializeField] private float _rotationSpeed;
     
+        [Space (5), Header("Sounds")]
+        [SerializeField] private EventReference stepSoundEvent;
+        
         private Animator _animator;
         private Rigidbody _rb;
     
@@ -44,6 +48,11 @@ namespace PlayerScripts
         
             _animator.SetFloat("Z", animatorTransform.z);
             _animator.SetFloat("X", animatorTransform.x);
+        }
+
+        void StepSound()
+        {
+            FmodAudioManager.Instance.Play(stepSoundEvent, false, gameObject);
         }
     }
 }

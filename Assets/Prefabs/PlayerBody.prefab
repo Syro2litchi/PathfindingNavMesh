@@ -509,7 +509,14 @@ MonoBehaviour:
   player: {fileID: 225092029332827947}
   bulletPrefab: {fileID: 3900677161280757600, guid: 9e6f7b342c67bee40a2f9feebd32cb68, type: 3}
   bulletSpeed: 10
-  _bulletDirectionVector: {x: 0, y: 0, z: 0}
+  bulletDirectionVector: {x: 0, y: 0, z: 0}
+  gunShot:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   fireGun: 0
 --- !u!114 &995256537007909739
 MonoBehaviour:
@@ -526,6 +533,13 @@ MonoBehaviour:
   muzzleFlash: {fileID: 5592747961203240622, guid: e3f7788a6da96584a8a706e546374d3d, type: 3}
   hitWall: {fileID: 9119245111206938331, guid: 17143d1426326e647a258af67a3be147, type: 3}
   hitBot: {fileID: 6081446838364083656, guid: 7e8e6a3cdf3f87c4fa25427b40acb919, type: 3}
+  gunShot:
+    Guid:
+      Data1: -470127405
+      Data2: 1238325906
+      Data3: -1050047349
+      Data4: -1046042331
+    Path: event:/GunShot SFX
   fire: 0
 --- !u!1 &6054244291009973066
 GameObject:
